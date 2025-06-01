@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reproductor de música</title>
+  <style>
+    body {
+      background-color: rgb(6, 6, 10);
+      color: blanchedalmond;
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+    .control-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .icono {
+      font-size: 24px;
+      color: white;
+    }
+
+    .botones {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #000000;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #222222;
+    }
+
+    .parrafo-con-imagen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 0;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .parrafo-con-imagen img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .parrafo-con-imagen p {
+      max-width: 500px;
+      margin: 0;
+      text-align: justify;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+  </style>
+</head>
+<body>
+
+  <audio id="musica" loop>
+    <source src="Sleep Token - Fall For Me.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio HTML5.
+  </audio>
+
+  <div class="control-container">
+    <span class="icono">🤍</span>
+    <div class="botones">
+      <button onclick="document.getElementById('musica').play()">▶ Play</button>
+      <button onclick="document.getElementById('musica').pause()">⏸ Pause</button>
+    </div>
+  </div>
+
+
+  <div class="parrafo-con-imagen">
+    <p>The world can be chaotic at times and then I lay down and hear your voice and everything becomes right in the world</p>
+    <img src="imagen1.jpg" alt="Imagen derecha">
+  </div>
+
+ 
+  <div class="parrafo-con-imagen reverse">
+    <p>Every time I get a text from you I'm so happy and I love being on calls with you, even if I'm so tired.  
+    This week has been exhausting and long, and you make it so easy for me.  
+    When I see you, I get this warmth in my chest and I can't stop smiling.</p>
+    <img src="imagen2.jpg" alt="Imagen izquierda">
+  </div>
+
+
+  <div class="parrafo-con-imagen">
+    <p>I fell for you, so you don't have to question it.  
+    We can go away forever to a place just for you and me, and stay there forever.</p>
+    <img src="imagen3.jpg" alt="Imagen derecha">
+  </div>
+
+</body>
+</html>
+
